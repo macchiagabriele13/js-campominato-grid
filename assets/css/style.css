@@ -14,7 +14,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     background-color: blue;
-    
+    display: none;
 }
 
 .title{
@@ -30,4 +30,8 @@ body{
     width: calc(100% / 10);
     aspect-ratio: 1/1;
     background-color: rgba(212, 27, 61, 0.451);
+}
+
+.azzurro{
+    background-color: aqua;
 }
