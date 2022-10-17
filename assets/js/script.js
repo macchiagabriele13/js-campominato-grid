@@ -19,6 +19,8 @@ console.log(containerGrid);
 /* Devo rendere flessibile la griglia attraverso una funzione */
 
 /* Ogni cella ha un numero progressivo, da 1 a 100. */
+bottoneGeneratore.addEventListener("click", function () {
+   /*  containerGrid.style.display = "flex"; */
 
 let numbMax = 100
 
@@ -26,22 +28,24 @@ boxGenerator(numbMax, containerGrid)
 
 function boxGenerator(numero, griglia) {
     for (let i = 1; i <= numero; i++) {
-        griglia.innerHTML += `<div class="box" id="${i}"></div>`
+        griglia.innerHTML += `<div class="box">"${i}"</div>`
     }
 
     let boxEl = document.querySelectorAll('.box')
     console.log(boxEl);
 
-    for (let i = 1; i <= boxEl.length; i++) {
+    for (let i = 0; i < boxEl.length; i++) {
         let currentBox = boxEl[i]
         console.log(currentBox);
 
-        /* currentBox.addEventListener("click", function () {
+        currentBox.addEventListener("click", function () {
             currentBox.classList.toggle("azzurro")
-            console.log(currentBox.id) */
-        }
+            console.log(currentBox.innerHTML)
+        })
     }
+}
 
+})
 
 /* Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata. */
 
@@ -60,4 +64,4 @@ function boxGenerator(numero, griglia) {
 
 bottoneGeneratore.addEventListener("click", function () {
     containerGrid.style.display = "flex";
-});
+})
